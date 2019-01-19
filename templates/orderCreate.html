@@ -1,0 +1,82 @@
+<h1>Checkout</h1>
+<hr />
+<h2>Place your order now</h2>
+
+<div class="formWrapper">
+  <div class="orderTotal">
+    Order Total: <span id="orderPrice"></span><a href="cart/edit">details</a>
+  </div>
+
+  <form id="orderInfo" action="/api/orders" method="POST">
+    <input type="hidden" name="_method" value="POST"/>
+    <div class="formError"></div>
+    <input class="hiddenPhoneNumberInput"  type="hidden" name="phone" />
+    <div class="inputWrapper">
+      <div class="inputLabel">Delivery Address</div>
+      <input class="addressInput" type="text" name="deliveryAddress" placeholder="Street, City, State, Zip" />
+    </div>
+    <input type="checkbox" id="dateTimeChk" name="dateRequested" /> Request a specific delivery date and time (within the next 48 hours)
+    <fieldset class="dateControls" disabled>
+      <div class="timeWrapper" dateMax="{date.max}">
+        <div class="formError"></div>
+        Date:
+        <input id="dateInput" type="date" name="dateControl" class="datePartControl"  disabled />
+        Time:
+        <select name="hour" class="datePartControl" id="hourControl" disabled>
+          <option value="1">01</option>
+          <option value="2">02</option>
+          <option value="3">03</option>
+          <option value="4">04</option>
+          <option value="5">05</option>
+          <option value="6">06</option>
+          <option value="7">07</option>
+          <option value="8">08</option>
+          <option value="9">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12" selected="selected">12</option>
+        </select>
+        :
+        <select name="minute" class="datePartControl" id="minuteControl" disabled>
+          <option value="00">00</option>
+          <option value="05">05</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55">55</option>
+        </select>
+        <select name="am_pm" class="datePartControl" id="am_pmControl" disabled>
+          <option value="am">am</option>
+          <option value="pm">pm</option>
+        </select>
+      </div>
+      <input class="hiddenDateInput datePartControl"  type="hidden" name="deliveryDate"  disabled />
+    </fieldset>
+    <div class="inputWrapper">
+      <div class="inputLabel">Phone Number</div>
+      <input class="disabled displayPhoneInput" type="text" name="displayPhone" disabled />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Name on Credit Card</div>
+      <input class="ccNameInput" type="text" name="ccName" placeholder="John A Doe" required />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Credit Card Number</div>
+      <input class="ccNumberInput" type="text" name="ccNumber" placeholder="0000 1111 2222 3333" required />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Email</div>
+      <input class="emailInput" type="text" name="email" placeholder="name@example.com" />
+    </div>
+
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Place Order</button>
+    </div>
+  </form>
+</div>

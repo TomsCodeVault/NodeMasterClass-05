@@ -1,0 +1,42 @@
+<h1>Create Your Account</h1>
+<h2>Sign up now and start enjoying pizza today</h2>
+
+<div class="formWrapper">
+  <form id="accountCreate" action="/api/users" method="POST">
+    <div class="formError"></div>
+    <div class="inputWrapper">
+      <div class="inputLabel">First Name</div>
+      <input type="text" name="firstName" placeholder="John" required />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Last Name</div>
+      <input type="text" name="lastName" placeholder="Smith" required />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Phone Number</div>
+      <input type="text" name="phone" placeholder="(415) 123-4567" required />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Email</div>
+      <input type="text" name="email" placeholder="name@domain.com" required />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Address</div>
+      <input type="text" name="address" placeholder="street, city, state, zip" required />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Choose a Password</div>
+      <input type="password" name="password" placeholder="Make it a good one!" required />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">
+        <label for="tosAgreement">
+          <input type="checkbox" name="tosAgreement" id="tosAgreement" value="agree">
+          I agree to the terms and conditions</div>
+        </label>
+    </div>
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Get Started</button>
+    </div>
+  </form>
+</div>

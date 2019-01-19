@@ -1,0 +1,21 @@
+<h1>Order Details</h1>
+<hr />
+<div class="orderHeader" dataOrderNumber={body.orderId}>
+  <div class="orderDetailLabel">Order Number:</div><div class="orderDetailDisplay" id="orderNumberDisplay">{body.orderId}</div>
+  <div class="orderDetailLabel">Order Date:</div><div class="orderDetailDisplay" id="orderDateDisplay">Date</div>
+  <div class="orderDetailLabel">Customer Name:</div><div class="orderDetailDisplay" id="orderNameDisplay">Name</div>
+  <div class="orderDetailLabel">Delivery Address:</div><div class="orderDetailDisplay" id="orderAddressDisplay">Address</div>
+  <div class="orderDetailLabel">Delivery Date:</div><div class="orderDetailDisplay" id="orderDeliveryDateDisplay">Date</div>
+</div>
+
+<table id="orderItemTable">
+  <tr>
+    <th>Quantity</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Sub-Total</th>
+  </tr>
+  <tr id="noItemsMessage">
+    <td colspan="4">There are no items associated with this order.</td>
+  </tr>
+</table>

@@ -5,4 +5,4 @@ Node.js Master Class Homework Assignment #5
 
 This assignment uses a few very simple javascript functions and a test runner to demonstrate some unit testing in node.
 
-To test just clone the repo and start it using "node test".
+To test, just clone the repo and start it using "node test".

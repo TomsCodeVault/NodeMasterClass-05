@@ -26,7 +26,7 @@
    }
  };
 
- // Test if the work "funny" is in the supplied string
+ // Test if the word "funny" is in the supplied string
  sampleFunctions.funnyExists = function(string){
    if(typeof(string) == 'string'){
      arr = string.split(' ');
